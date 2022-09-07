@@ -1,2 +1,7 @@
 set clipboard+=unnamed
 set visualbell
+set relativenumber
+set number
+
+let mapleader = " "
+xnoremap <leader>p "_dP
