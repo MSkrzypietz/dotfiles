@@ -20,6 +20,7 @@ return require('packer').startup(function(use)
   use 'ThePrimeagen/harpoon'
   use 'mbbill/undotree'
   use 'tpope/vim-fugitive'
+  use 'numToStr/Comment.nvim'
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
