@@ -1,7 +1,31 @@
 set clipboard+=unnamed
 set visualbell
+
 set relativenumber
 set number
 
+set incsearch
+set ignorecase
+
+set scrolloff=8
+
 let mapleader = " "
+
+nnoremap J mzJ`z
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+nnoremap <leader>y \"+y
+vnoremap <leader>y \"+y
+nnoremap <leader>Y \"+Y
+
+nnoremap <leader>d \"_d
+vnoremap <leader>d \"_d
+
+inoremap <C-c> <Esc>
+
+nnoremap Q <nop>
+
 xnoremap <leader>p "_dP
