@@ -7,3 +7,6 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # Start imwheel for scrolling fix and silence output:
 imwheel -b "4 5" > /dev/null 2>&1
+
+source <(minikube completion zsh)
+source <(kubectl completion zsh)
