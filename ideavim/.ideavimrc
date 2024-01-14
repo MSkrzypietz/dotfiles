@@ -5,7 +5,9 @@ set relativenumber
 set number
 
 set incsearch
+set smartcase
 set ignorecase
+set gdefault
 
 set scrolloff=8
 
