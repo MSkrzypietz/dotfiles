@@ -1,6 +1,8 @@
 set clipboard+=unnamedplus
 set visualbell
 
+set NERDTree
+
 set relativenumber
 set number
 
