@@ -5,7 +5,8 @@ export EDITOR="$VISUAL"
 
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PROTOBUF=/usr/local/protobuf
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin:$PROTOBUF/bin
 
-# source <(minikube completion zsh)
-# source <(kubectl completion zsh)
+source <(minikube completion zsh)
+source <(kubectl completion zsh)
