@@ -33,3 +33,6 @@ inoremap <C-c> <Esc>
 nnoremap Q <nop>
 
 xnoremap <leader>p "_dP
+
+map <C-k> <Action>(ShowErrorDescription)
+
