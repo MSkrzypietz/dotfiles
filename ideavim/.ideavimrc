@@ -2,6 +2,7 @@ set clipboard+=unnamedplus
 set visualbell
 
 set NERDTree
+set highlightedyank
 
 set relativenumber
 set number
@@ -12,6 +13,8 @@ set ignorecase
 set gdefault
 
 set scrolloff=8
+
+let g:highlightedyank_highlight_color = "rgba(38, 139, 210, 51)"
 
 let mapleader = " "
 
