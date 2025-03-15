@@ -3,6 +3,7 @@ set visualbell
 
 set NERDTree
 set highlightedyank
+set commentary
 
 set relativenumber
 set number
@@ -30,6 +31,9 @@ nnoremap <leader>Y \"+Y
 
 nnoremap <leader>d \"_d
 vnoremap <leader>d \"_d
+
+nnoremap <C-/> :Commentary<CR>
+vnoremap <C-/> :Commentary<CR>
 
 inoremap <C-c> <Esc>
 
