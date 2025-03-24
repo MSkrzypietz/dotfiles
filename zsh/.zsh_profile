@@ -1,6 +1,6 @@
-alias vim=nvim
+alias vim=vi
 
-export VISUAL="nvim"
+export VISUAL="vi"
 export EDITOR="$VISUAL"
 
 export GOROOT=/usr/local/go
@@ -8,5 +8,7 @@ export GOPATH=$HOME/go
 export PROTOBUF=/usr/local/protobuf
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin:$PROTOBUF/bin
 
-source <(minikube completion zsh)
-source <(kubectl completion zsh)
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+#source <(minikube completion zsh)
+#source <(kubectl completion zsh)
