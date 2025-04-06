@@ -1,14 +1,39 @@
-alias vim=vi
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
-export VISUAL="vi"
+alias vim=nvim
+
+export VISUAL="nvim"
 export EDITOR="$VISUAL"
+export ORACLE_HOME="$HOMEBREW_PREFIX"
 
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export PROTOBUF=/usr/local/protobuf
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin:$PROTOBUF/bin
+export PATH="$PATH:$(go env GOPATH)/bin"
+export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(fnm env --use-on-cd --shell zsh)"
+eval $(thefuck --alias)
+eval "$(zoxide init zsh)"
+source <(fzf --zsh)
+source $HOME/.aliases
 
-#source <(minikube completion zsh)
-#source <(kubectl completion zsh)
+export PNPM_HOME="$HOME/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
+export HISTSIZE=1000000
+export SAVEHIST=1000000
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_FIND_NO_DUPS
+setopt HIST_REDUCE_BLANKS
+alias hg='history | grep'
+
+function run_with_timing() {
+    start_time=$(date +%s.%N)
+    "$@"
+    end_time=$(date +%s.%N)
+    duration=$(echo "$end_time - $start_time" | bc)
+    echo "\nCommand completed in $duration seconds"
+}
+alias rwt=run_with_timing
+
