@@ -34,8 +34,6 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-exec --no-startup-id ~/.screenlayout/home-setup.sh
-
 # Remove borders
 default_border pixel 1
 default_floating_border pixel 1
@@ -52,7 +50,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec ghostty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -191,7 +189,3 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
-
-workspace 1 output HDMI-0
-workspace 2 output DP-2
-workspace 3 output DP-0
