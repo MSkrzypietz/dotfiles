@@ -27,6 +27,31 @@
   };
 */
 
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestion.enable = true;
+/*
+    syntaxHighlighting.enable = true;
+    keyMappings = # sh
+      ''
+        # bindkey -d # Reset to default.
+        bindkey -v # Use vi key bindings.
+
+        # bindkey "^H" autosuggest-execute
+        # bindkey "^ " autosuggest-accept
+        # bindkey "^Q" autosuggest-clear
+        # bindkey -M vicmd "e" history-search-backward
+        # bindkey -M vicmd "n" history-search-forward
+        # bindkey -M vicmd "^[[A" history-search-backward # up
+        # bindkey -M vicmd "^[[B" history-search-forward # down
+        # bindkey -M vicmd v edit-command-line # ESC-v to edit in an external editor.
+        # bindkey -M viins "^L" clear-screen
+        # bindkey -M viins "^W" backward-kill-word
+      '';
+*/
+  };
+
   programs.waybar = {
     enable = true;
     settings = [{
