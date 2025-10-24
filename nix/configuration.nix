@@ -198,8 +198,8 @@
   environment.systemPackages = with pkgs; [
     unzip vim git pkgs.kitty greetd.tuigreet  # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     pyprland hyprpicker hyprcursor hyprlock hypridle hyprpaper hyprsunset hyprpolkitagent
-    klavaro gtypist via
-    rofi waybar teamspeak5_client
+    klavaro gtypist via zoxide
+    rofi waybar teamspeak5_client discord-ptb
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
