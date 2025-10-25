@@ -1,12 +1,8 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, ... }:
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ./hardware-configuration.nix
     ];
 
@@ -22,8 +18,7 @@
   # Kernel parameters for NVIDIA on Wayland
   boot.kernelParams = [ "nvidia_drm.modeset=1" ];
 
-  networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.hostName = "nixos";
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -93,16 +88,6 @@
     LC_TIME = "de_DE.UTF-8";
   };
 
-  # Enable the X11 windowing system.
-  # services.xserver.enable = true;
-
-  # Enable the GNOME Desktop Environment.
-  #services.xserver.displayManager.gdm.enable = true;
-  #services.xserver.desktopManager.gnome.enable = true;
-
-  #services.xserver.displayManager.sddm.enable = true;
-  #services.xserver.windowManager.hyprland.enable = true;
-
   programs.steam.enable = true;
   programs.steam.gamescopeSession.enable = true;
   programs.gamemode.enable = true;
@@ -167,17 +152,11 @@
     #media-session.enable = true;
   };
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.michael = {
     isNormalUser = true;
     description = "michael";
     extraGroups = [ "networkmanager" "wheel" "input" "video" "audio" "tss" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
   };
 
   users.users.greeter = {
@@ -187,16 +166,14 @@
     linger = true;
   };
 
-  # Install firefox.
   programs.firefox.enable = true;
 
-  # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    unzip vim git pkgs.kitty greetd.tuigreet  # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    unzip vim git pkgs.kitty greetd.tuigreet
     pyprland hyprpicker hyprcursor hyprlock hypridle hyprpaper hyprsunset hyprpolkitagent
     klavaro gtypist via zoxide
     rofi waybar teamspeak5_client discord-ptb
@@ -228,5 +205,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.05"; # Did you read the comment?
-
 }
