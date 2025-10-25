@@ -147,6 +147,9 @@
     nerd-fonts.jetbrains-mono
     font-awesome
 
+    go
+    jetbrains.goland
+
     ghostty
 
     # utils
