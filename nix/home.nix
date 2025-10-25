@@ -4,6 +4,9 @@
   home.username = "michael";
   home.homeDirectory = "/home/michael";
 
+  home.file.".config/hypr/hyprland.conf".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/projects/dotfiles/hypr/hyprland.conf";
+  home.file.".ideavimrc".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/projects/dotfiles/ideavim/.ideavimrc";
+
   programs.zoxide = {
     enable = true;
     enableZshIntegration = true;
