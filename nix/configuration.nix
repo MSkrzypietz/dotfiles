@@ -93,6 +93,7 @@
   programs.steam.enable = true;
   programs.steam.gamescopeSession.enable = true;
   programs.gamemode.enable = true;
+  programs.gamemode.settings.general.inhibit_screensaver = 0;
   programs.gamescope.enable = true;
 
   programs.zsh.enable = true;
@@ -159,7 +160,7 @@
   users.users.michael = {
     isNormalUser = true;
     description = "michael";
-    extraGroups = [ "networkmanager" "wheel" "input" "video" "audio" "tss" ];
+    extraGroups = [ "networkmanager" "wheel" "input" "video" "audio" "tss" "gamemode" ];
   };
 
   users.users.greeter = {
