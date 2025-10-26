@@ -40,6 +40,9 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     initContent = beforeCompInit;
+    initExtra = ''
+      export PATH="$HOME/go/bin:$PATH"
+    '';
   };
 
   programs.waybar = {
