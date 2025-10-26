@@ -15,8 +15,10 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  # Kernel parameters for NVIDIA on Wayland
-  boot.kernelParams = [ "nvidia_drm.modeset=1" ];
+  boot.kernelParams = [
+    "nvidia_drm.modeset=1" # Kernel parameters for NVIDIA on Wayland
+    "mitigations=off" # Disable CPU mitigations
+  ];
 
   networking.hostName = "nixos";
 
@@ -91,6 +93,7 @@
   programs.steam.enable = true;
   programs.steam.gamescopeSession.enable = true;
   programs.gamemode.enable = true;
+  programs.gamescope.enable = true;
 
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;

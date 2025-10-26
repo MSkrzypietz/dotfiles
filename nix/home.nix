@@ -167,7 +167,6 @@
     }];
   };
 
-
   home.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
     font-awesome
@@ -176,6 +175,7 @@
     jetbrains.goland
 
     ghostty
+    mangohud
 
     # utils
     ripgrep # recursively searches directories for a regex pattern
