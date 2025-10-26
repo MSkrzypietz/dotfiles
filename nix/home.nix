@@ -24,7 +24,12 @@
       '';
     keyMappings =
       ''
+        bindkey -d # reset to default
         bindkey -v # vi key bindings
+
+        bindkey "^E" autosuggest-execute
+        bindkey "^A" autosuggest-accept
+        bindkey "^V" autosuggest-clear
       '';
     beforeCompInit = lib.mkOrder 550 ''
       ${constants}
