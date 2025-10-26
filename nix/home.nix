@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   home.username = "michael";
@@ -17,10 +17,24 @@
     enableZshIntegration = true;
   };
 
-  programs.zsh = {
+  programs.zsh = let
+    constants =
+      ''
+        source ~/.zshrc.local
+      '';
+    keyMappings =
+      ''
+        bindkey -v # vi key bindings
+      '';
+    beforeCompInit = lib.mkOrder 550 ''
+      ${constants}
+      ${keyMappings}
+    '';
+  in {
     enable = true;
     enableCompletion = true;
     autosuggestion.enable = true;
+    initContent = beforeCompInit;
   };
 
   programs.waybar = {
