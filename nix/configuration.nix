@@ -180,7 +180,7 @@
     unzip vim git pkgs.kitty greetd.tuigreet
     pyprland hyprpicker hyprcursor hyprlock hypridle hyprpaper hyprsunset hyprpolkitagent
     klavaro gtypist via zoxide
-    rofi waybar teamspeak5_client discord-ptb
+    rofi waybar teamspeak6-client discord-ptb
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
