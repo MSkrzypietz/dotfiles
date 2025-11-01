@@ -21,6 +21,7 @@
     constants =
       ''
         source ~/.zshrc.local
+        export PATH="$HOME/go/bin:$PATH"
       '';
     keyMappings =
       ''
@@ -40,9 +41,6 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     initContent = beforeCompInit;
-    initExtra = ''
-      export PATH="$HOME/go/bin:$PATH"
-    '';
   };
 
   programs.waybar = {
@@ -238,8 +236,12 @@
 
   programs.git = {
     enable = true;
-    userName = "MSkrzypietz";
-    userEmail = "michael.skr97@gmail.com";
+    settings = {
+      user = {
+        name = "MSkrzypietz";
+        email = "michael.skr97@gmail.com";
+      };
+    };
   };
 
   programs.starship = {

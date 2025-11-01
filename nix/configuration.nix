@@ -22,14 +22,11 @@
 
   networking.hostName = "nixos";
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  services.xserver.enable = true;
-  services.xserver.libinput.enable = true;
-  services.xserver.libinput.mouse.accelProfile = "flat";
-  services.xserver.libinput.mouse.accelSpeed = "0";
+  services.libinput = {
+    enable = true;
+    mouse.accelProfile = "flat";
+    mouse.accelSpeed = "0";
+  };
 
   # Enable OpenGL
   hardware.graphics = {
@@ -106,7 +103,7 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet \
+        command = "${pkgs.tuigreet}/bin/tuigreet \
           --time --cmd 'uwsm start hyrpland'";
         user = "greeter";
       };
@@ -173,7 +170,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    unzip vim git pkgs.kitty greetd.tuigreet
+    unzip vim git pkgs.kitty tuigreet
     pyprland hyprpicker hyprcursor hyprlock hypridle hyprpaper hyprsunset hyprpolkitagent
     klavaro gtypist via zoxide
     rofi waybar teamspeak6-client discord-ptb
