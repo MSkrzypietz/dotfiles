@@ -17,7 +17,6 @@
 
   boot.kernelParams = [
     "nvidia_drm.modeset=1" # Kernel parameters for NVIDIA on Wayland
-    "mitigations=off" # Disable CPU mitigations
   ];
 
   networking.hostName = "nixos";
@@ -87,12 +86,6 @@
     LC_TIME = "de_DE.UTF-8";
   };
 
-  programs.steam.enable = true;
-  programs.steam.gamescopeSession.enable = true;
-  programs.gamemode.enable = true;
-  programs.gamemode.settings.general.inhibit_screensaver = 0;
-  programs.gamescope.enable = true;
-
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
   environment.shells = with pkgs; [ zsh ];
@@ -155,13 +148,13 @@
   users.users.michael = {
     isNormalUser = true;
     description = "michael";
-    extraGroups = [ "networkmanager" "wheel" "input" "video" "audio" "tss" "gamemode" ];
+    extraGroups = [ "networkmanager" "wheel" "input" "video" "audio" "tss"];
   };
 
   users.users.greeter = {
     isNormalUser = false;
     description = "greetd greeter user";
-    extraGroups = [ "video" "audtio" ];
+    extraGroups = [ "wheel" "input" "video" "audtio" ];
     linger = true;
   };
 
