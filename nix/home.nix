@@ -175,6 +175,10 @@
     ghostty
     mangohud
     mongosh
+    nodePackages_latest.nodejs
+    wrangler
+    hcloud
+    terraform
 
     # utils
     ripgrep # recursively searches directories for a regex pattern
