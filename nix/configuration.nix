@@ -93,6 +93,8 @@
   programs.gamemode.settings.general.inhibit_screensaver = 0;
   programs.gamescope.enable = true;
 
+  programs.nix-ld.enable = true;
+
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
   environment.shells = with pkgs; [ zsh ];
