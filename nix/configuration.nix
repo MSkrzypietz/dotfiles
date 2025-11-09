@@ -157,7 +157,7 @@
   users.users.michael = {
     isNormalUser = true;
     description = "michael";
-    extraGroups = [ "networkmanager" "wheel" "input" "video" "audio" "tss" "gamemode" ];
+    extraGroups = [ "networkmanager" "wheel" "input" "video" "audio" "tss" "gamemode" "docker" ];
   };
 
   users.users.greeter = {
@@ -168,6 +168,8 @@
   };
 
   programs.firefox.enable = true;
+
+  virtualisation.docker.enable = true;
 
   nixpkgs.config.allowUnfree = true;
 
