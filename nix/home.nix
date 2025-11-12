@@ -22,6 +22,7 @@
       ''
         source ~/.zshrc.local
         export PATH="$HOME/go/bin:$PATH"
+        export EDITOR="vim"
       '';
     keyMappings =
       ''
