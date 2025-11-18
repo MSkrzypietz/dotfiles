@@ -172,6 +172,7 @@
 
     go
     jetbrains.goland
+    jetbrains.webstorm
 
     ghostty
     mangohud
