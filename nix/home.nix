@@ -181,6 +181,9 @@
     wrangler
     hcloud
     terraform
+    corepack
+    just
+    bun
 
     # utils
     ripgrep # recursively searches directories for a regex pattern
