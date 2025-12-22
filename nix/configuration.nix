@@ -17,6 +17,7 @@
 
   boot.kernelParams = [
     "mitigations=off" # Disable CPU mitigations
+    "amdgpu.ppfeaturemask=0xffffffff"
   ];
 
   networking.hostName = "nixos";
@@ -144,6 +145,7 @@
     pyprland hyprpicker hyprcursor hyprlock hypridle hyprpaper hyprsunset hyprpolkitagent
     klavaro gtypist via zoxide
     rofi waybar teamspeak6-client discord-ptb
+    mesa
   ];
 
   # This value determines the NixOS release from which the default
