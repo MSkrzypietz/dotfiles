@@ -171,8 +171,8 @@
     font-awesome
 
     go
-    #jetbrains.goland
-    #jetbrains.webstorm
+    jetbrains.goland
+    jetbrains.webstorm
 
     ghostty
     mangohud
