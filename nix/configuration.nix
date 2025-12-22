@@ -146,6 +146,7 @@
     klavaro gtypist via zoxide
     rofi waybar teamspeak6-client discord-ptb
     mesa
+    lmstudio
   ];
 
   # This value determines the NixOS release from which the default
