@@ -145,7 +145,7 @@
     pyprland hyprpicker hyprcursor hyprlock hypridle hyprpaper hyprsunset hyprpolkitagent
     klavaro gtypist via zoxide
     rofi waybar teamspeak6-client discord-ptb
-    mesa
+    mesa gcc
     lmstudio
   ];
 
