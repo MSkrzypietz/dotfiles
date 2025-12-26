@@ -22,7 +22,8 @@
       ''
         source ~/.zshrc.local
         export PATH="$HOME/go/bin:$PATH"
-        export EDITOR="vim"
+        export EDITOR="nvim"
+        alias vim="nvim"
       '';
     keyMappings =
       ''
@@ -64,20 +65,19 @@
       modules-center = [ "hyprland/window" ];
       modules-right = [
         "tray"
-        "network"
-        "custom/divider"
-        "backlight"
         "custom/divider"
         "pulseaudio"
         "custom/divider"
         "clock"
       ];
       "hyprland/window" = { format = "{}"; };
-      "wlr/workspaces" = {
-        on-scroll-up = "hyprctl dispatch workspace e+1";
-        on-scroll-down = "hyprctl dispatch workspace e-1";
-        all-outputs = true;
+      "hyprland/workspaces" = {
         on-click = "activate";
+        format = "{name}";
+        format-active = "<span class='active'>{name}</span>";
+        format-urgent = "{name}";
+        format-empty = "{name}";
+        format-occupied = "{name}";
       };
       battery = { format = "󰁹 {}%"; };
       cpu = {
@@ -95,12 +95,6 @@
       backlight = {
         format = "󰖨 {}";
         device = "acpi_video0";
-      };
-      "custom/weather" = {
-        tooltip = true;
-        format = "{}";
-        restart-interval = 300;
-        exec = "/home/roastbeefer/.cargo/bin/weather";
       };
       tray = {
         icon-size = 13;
@@ -155,15 +149,26 @@
         interval = "once";
         tooltip = false;
       };
-      style = pkgs.writeTextFile {
-        name = "style.css";
-        text = ''
-          * {
-            font-family: JetBrainsMono Nerd Font Mono;
-          }
-      '';
-      };	
     }];
+    style = ''
+	* {
+	  font-family: JetBrainsMono Nerd Font Mono;
+	}
+
+	#workspaces button {
+	    color: #a0aec0;
+	    background-color: transparent;
+	    border-radius: 0;
+	    padding: 5px 10px;
+	    margin: 0 2px;
+	}
+
+	#workspaces button.active {
+	    color: white;
+	    background-color: #4299e1;
+	    border-radius: 5px;
+	}
+    '';
   };
 
   home.packages = with pkgs; [
