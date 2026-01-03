@@ -144,7 +144,7 @@
     unzip neovim git pkgs.kitty tuigreet gnumake
     pyprland hyprpicker hyprcursor hyprlock hypridle hyprpaper hyprsunset hyprpolkitagent
     klavaro gtypist via zoxide
-    rofi waybar teamspeak6-client discord-ptb
+    rofi waybar discord-ptb
     mesa gcc
     lmstudio
   ];
