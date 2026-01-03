@@ -183,7 +183,6 @@
     mangohud
 
     ghostty
-    mongosh
     nodePackages_latest.nodejs
     wrangler
     hcloud
