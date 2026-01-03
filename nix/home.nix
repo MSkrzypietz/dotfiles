@@ -179,8 +179,10 @@
     jetbrains.goland
     jetbrains.webstorm
 
-    ghostty
+    faugus-launcher
     mangohud
+
+    ghostty
     mongosh
     nodePackages_latest.nodejs
     wrangler
