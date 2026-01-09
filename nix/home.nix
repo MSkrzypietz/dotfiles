@@ -179,6 +179,7 @@
     jetbrains.goland
     jetbrains.webstorm
 
+    wowup-cf
     faugus-launcher
     mangohud
 
