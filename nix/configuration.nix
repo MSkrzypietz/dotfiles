@@ -147,7 +147,7 @@
     rofi waybar discord-ptb
     mesa gcc
     lmstudio
-    teamspeak6-client
+    teamspeak6-client chromium
   ];
 
   # This value determines the NixOS release from which the default
