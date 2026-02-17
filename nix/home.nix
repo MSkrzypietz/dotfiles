@@ -178,6 +178,7 @@
     go
     jetbrains.goland
     jetbrains.webstorm
+    opencode
 
     wowup-cf
     faugus-launcher
