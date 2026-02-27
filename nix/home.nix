@@ -180,17 +180,11 @@
     jetbrains.webstorm
     opencode
 
-    wowup-cf
-    faugus-launcher
-    mangohud
-
     ghostty
     nodePackages_latest.nodejs
     wrangler
     hcloud
     terraform
-    corepack
-    just
     bun
 
     # utils

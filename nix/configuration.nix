@@ -58,12 +58,6 @@
     LC_TIME = "de_DE.UTF-8";
   };
 
-  programs.steam.enable = true;
-  programs.steam.gamescopeSession.enable = true;
-  programs.gamemode.enable = true;
-  programs.gamemode.settings.general.inhibit_screensaver = 0;
-  programs.gamescope.enable = true;
-
   programs.nix-ld.enable = true;
 
   programs.zsh.enable = true;
@@ -147,7 +141,6 @@
     rofi waybar discord-ptb
     mesa gcc
     lmstudio
-    teamspeak6-client chromium
   ];
 
   # This value determines the NixOS release from which the default
