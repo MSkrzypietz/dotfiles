@@ -6,6 +6,7 @@
 
   home.file.".config/hypr/hyprland.conf".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/projects/dotfiles/hypr/hyprland.conf";
   home.file.".ideavimrc".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/projects/dotfiles/ideavim/.ideavimrc";
+  home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/projects/dotfiles/nvim/.config/nvim";
 
   programs.zoxide = {
     enable = true;
@@ -264,6 +265,17 @@
       gcloud.disabled = true;
       line_break.disabled = true;
     };
+  };
+
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+    viAlias = true;
+    vimAlias = true;
+    vimdiffAlias = true;
+    plugins = with pkgs.vimPlugins; [
+      packer-nvim
+    ];
   };
 
   # This value determines the home Manager release that your
