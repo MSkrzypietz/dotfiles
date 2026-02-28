@@ -183,6 +183,7 @@
 
     ghostty
     nodePackages_latest.nodejs
+    pnpm
     wrangler
     hcloud
     terraform
