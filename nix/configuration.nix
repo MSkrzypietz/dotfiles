@@ -136,7 +136,8 @@
 
   environment.systemPackages = with pkgs; [
     unzip neovim git pkgs.kitty tuigreet gnumake
-    pyprland hyprpicker hyprcursor hyprlock hypridle hyprpaper hyprsunset hyprpolkitagent hyprshot
+    pyprland hyprpicker hyprcursor hyprlock hypridle hyprpaper hyprsunset hyprpolkitagent
+    grim slurp wl-clipboard
     klavaro gtypist via zoxide
     rofi waybar discord-ptb
     mesa gcc
