@@ -25,6 +25,8 @@
         export PATH="$HOME/go/bin:$PATH"
         export EDITOR="nvim"
         alias vim="nvim"
+        export PNPM_HOME="$HOME/.local/share/pnpm"
+        export PATH="$PNPM_HOME:$PATH" 
       '';
     keyMappings =
       ''
