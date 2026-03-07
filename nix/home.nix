@@ -27,6 +27,7 @@
         alias vim="nvim"
         export PNPM_HOME="$HOME/.local/share/pnpm"
         export PATH="$PNPM_HOME:$PATH" 
+        export NODE_EXTRA_CA_CERTS=/etc/ssl/certs/ca-bundle.crt
       '';
     keyMappings =
       ''
