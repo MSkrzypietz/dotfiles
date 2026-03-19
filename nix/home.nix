@@ -191,6 +191,7 @@
     hcloud
     terraform
     bun
+    protobuf
 
     # utils
     ripgrep # recursively searches directories for a regex pattern
