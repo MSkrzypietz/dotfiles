@@ -183,6 +183,7 @@
     jetbrains.goland
     jetbrains.webstorm
     opencode
+    mangohud
 
     ghostty
     nodePackages_latest.nodejs
