@@ -186,7 +186,7 @@
     mangohud
 
     ghostty
-    nodePackages_latest.nodejs
+    # nodePackages_latest.nodejs
     pnpm
     wrangler
     hcloud
