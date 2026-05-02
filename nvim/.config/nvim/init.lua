@@ -1,1 +1,1 @@
-require("mskrzypietz")
+/nix/store/arm804z2h5vg0zzj23v5dh9fik8j263r-home-manager-files/.config/nvim/init.lua

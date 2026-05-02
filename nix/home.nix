@@ -4,9 +4,10 @@
   home.username = "michael";
   home.homeDirectory = "/home/michael";
 
-  home.file.".config/hypr/hyprland.conf".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/projects/dotfiles/hypr/hyprland.conf";
-  home.file.".ideavimrc".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/projects/dotfiles/ideavim/.ideavimrc";
-  home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/projects/dotfiles/nvim/.config/nvim";
+  home.file.".config/hypr/hyprland.conf".source = config.lib.file.mkOutOfStoreSymlink "/home/michael/projects/dotfiles/hypr/hyprland.conf";
+  home.file.".ideavimrc".source = config.lib.file.mkOutOfStoreSymlink "/home/michael/projects/dotfiles/ideavim/.ideavimrc";
+  #home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/michael/projects/dotfiles/nvim/.config/nvim";
+  #xdg.configFile.".config/nvim".source =  "/home/michael/projects/dotfiles/nvim/.config/nvim";
 
   programs.zoxide = {
     enable = true;
@@ -279,6 +280,8 @@
     viAlias = true;
     vimAlias = true;
     vimdiffAlias = true;
+    withRuby = true;
+    withPython3 = true;
     plugins = with pkgs.vimPlugins; [
       packer-nvim
     ];
