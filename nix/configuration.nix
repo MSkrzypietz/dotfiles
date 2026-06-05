@@ -76,8 +76,8 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet \
-          --time --cmd 'uwsm start hyrpland'";
+        # command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd 'uwsm start hyprland'";
+        command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd start-hyprland";
         user = "greeter";
       };
     };
@@ -85,7 +85,7 @@
 
   programs.hyprland = {
     enable = true;
-    withUWSM = true;
+    # withUWSM = true;
     xwayland.enable = true;
   };
 
