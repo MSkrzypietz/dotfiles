@@ -6,10 +6,11 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    pi.url = "github:lukasl-dev/pi.nix";
   };
 
   outputs =
-    { nixpkgs, home-manager, ... }:
+    { nixpkgs, home-manager, ... }@inputs:
     {
       nixosConfigurations = {
         nixos = nixpkgs.lib.nixosSystem {
@@ -20,10 +21,8 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = { inherit inputs; };
               home-manager.users.michael = ./home.nix;
-
-              # Optionally, use home-manager.extraSpecialArgs to pass
-              # arguments to home.nix
             }
           ];
         };
