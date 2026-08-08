@@ -188,6 +188,7 @@
     jetbrains.goland
     jetbrains.webstorm
     opencode
+    plannotator
     mangohud
 
     ghostty

@@ -11,11 +11,29 @@
 
   outputs =
     { nixpkgs, home-manager, ... }@inputs:
+    let
+      system = "x86_64-linux";
+
+      # Local packages, shared between the flake output and the NixOS config.
+      plannotatorOverlay = final: prev: {
+        plannotator = final.callPackage ./pkgs/plannotator { };
+      };
+
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [ plannotatorOverlay ];
+      };
+    in
     {
+      packages.${system}.plannotator = pkgs.plannotator;
+
       nixosConfigurations = {
         nixos = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
+          inherit system;
           modules = [
+            {
+              nixpkgs.overlays = [ plannotatorOverlay ];
+            }
             ./configuration.nix
             home-manager.nixosModules.home-manager
             {
