@@ -8,7 +8,7 @@
   home.username = "michael";
   home.homeDirectory = "/home/michael";
 
-  home.file.".config/hypr/hyprland.conf".source = config.lib.file.mkOutOfStoreSymlink "/home/michael/projects/dotfiles/hypr/hyprland.conf";
+  home.file.".config/hypr/hyprland.lua".source = config.lib.file.mkOutOfStoreSymlink "/home/michael/projects/dotfiles/hypr/hyprland.lua";
   home.file.".ideavimrc".source = config.lib.file.mkOutOfStoreSymlink "/home/michael/projects/dotfiles/ideavim/.ideavimrc";
   #home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/michael/projects/dotfiles/nvim/.config/nvim";
   #xdg.configFile.".config/nvim".source =  "/home/michael/projects/dotfiles/nvim/.config/nvim";
