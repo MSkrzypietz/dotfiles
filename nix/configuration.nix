@@ -94,6 +94,38 @@
     NIXOS_OZONE_WL = "1";
   };
 
+  # Stylix: system-wide theming, with dark mode as the default.
+  stylix = {
+    enable = true;
+
+    # Prefer dark colour schemes. This also skews the palette generator
+    # towards dark when a scheme is generated from a wallpaper.
+    polarity = "dark";
+
+    # Deterministic dark scheme. Remove this to generate a palette from
+    # `stylix.image` instead (still dark, thanks to `polarity`).
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+
+    fonts = {
+      monospace = {
+        name = "JetBrainsMono Nerd Font";
+        package = pkgs.nerd-fonts.jetbrains-mono;
+      };
+    };
+
+    cursor = {
+      name = "Bibata-Modern-Ice";
+      package = pkgs.bibata-cursors;
+      size = 24;
+    };
+
+    icons = {
+      enable = true;
+      package = pkgs.papirus-icon-theme;
+      dark = "Papirus-Dark";
+    };
+  };
+
   programs.hyprlock.enable = true;
   services.hypridle.enable = true;
 
