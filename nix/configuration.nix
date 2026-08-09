@@ -162,7 +162,7 @@
   users.users.greeter = {
     isNormalUser = false;
     description = "greetd greeter user";
-    extraGroups = [ "video" "audtio" ];
+    extraGroups = [ "video" "audio" ];
     linger = true;
   };
 
