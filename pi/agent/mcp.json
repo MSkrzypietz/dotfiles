@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "cf-portal": {
+      "url": "https://portal.mcp.cfdata.org/mcp",
+      "auth": "oauth",
+      "lifecycle": "lazy"
+    },
+    "executor": {
+      "url": "https://executor.mulroy.ai/mcp",
+      "auth": "oauth",
+      "lifecycle": "lazy"
+    },
+  }
+}

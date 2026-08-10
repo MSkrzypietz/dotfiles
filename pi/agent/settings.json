@@ -1,0 +1,30 @@
+{
+  "lastChangelogVersion": "0.84.1",
+  "defaultProvider": "opencode",
+  "defaultModel": "deepseek-v4-flash-free",
+  "defaultThinkingLevel": "high",
+  "hideThinkingBlock": true,
+  "theme": "catppuccin-macchiato",
+  "extensions": [],
+  "packages": [
+    "npm:pi-extmgr",
+    {
+      "source": "npm:@plannotator/pi-extension",
+      "skills": []
+    },
+    "git:github.com/dmmulroy/pi-mcp",
+    "git:github.com/dmmulroy/pi-web-tools",
+    "npm:mitsupi",
+    "npm:@aliou/pi-guardrails",
+    "npm:pi-vim"
+  ],
+  "steeringMode": "all",
+  "followUpMode": "all",
+  "treeFilterMode": "no-tools",
+  "showCacheMissNotices": true,
+  "defaultProjectTrust": "always",
+  "tuiMode": "regular",
+  "fullscreenScrollbar": "always",
+  "quietStartup": false,
+  "enableInstallTelemetry": false
+}

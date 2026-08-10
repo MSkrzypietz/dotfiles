@@ -1,0 +1,65 @@
+# dependencies (bun install)
+node_modules
+
+# output
+out
+dist
+*.tgz
+
+# code coverage
+coverage
+*.lcov
+
+# logs
+logs
+_.log
+report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
+
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# caches
+.eslintcache
+.cache
+*.tsbuildinfo
+
+# IntelliJ based IDEs
+.idea
+
+# Finder (MacOS) folder config
+.DS_Store
+
+# pi agent runtime/state (keep settings + customization resources tracked)
+agent/*
+todos/*
+.pi/todos/*
+.pi/todos/*
+
+# pi MCP adapter runtime/secrets
+agent/mcp-oauth/
+agent/mcp-cache.json
+agent/mcp-npx-cache.json
+agent/mcp-auth.json
+home/.local/share/pi/mcp-auth.json
+
+!agent/settings.json
+!agent/tsconfig.json
+!agent/package.json
+!agent/cloak.json
+!agent/themes/
+!agent/themes/*.json
+!agent/extensions/
+!agent/extensions/**
+!agent/mcp.json
+!agent/APPEND_SYSTEM.md
+!agent/skills/
+!agent/skills/**
+agent/skills/ui/
+agent/skills/account-id-tags/
+
+# pi extensions node_modules
+agent/extensions/**/node_modules/
