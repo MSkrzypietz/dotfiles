@@ -14,7 +14,6 @@
     },
     "git:github.com/dmmulroy/pi-mcp",
     "git:github.com/dmmulroy/pi-web-tools",
-    "npm:mitsupi",
     "npm:@aliou/pi-guardrails",
     "npm:pi-vim"
   ],

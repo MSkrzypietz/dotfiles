@@ -10,6 +10,7 @@
 
   home.file.".config/hypr/hyprland.lua".source = config.lib.file.mkOutOfStoreSymlink "/home/michael/projects/dotfiles/hypr/hyprland.lua";
   home.file.".ideavimrc".source = config.lib.file.mkOutOfStoreSymlink "/home/michael/projects/dotfiles/ideavim/.ideavimrc";
+  home.file.".pi".source = config.lib.file.mkOutOfStoreSymlink "/home/michael/projects/dotfiles/pi";
   #home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/michael/projects/dotfiles/nvim/.config/nvim";
   #xdg.configFile.".config/nvim".source =  "/home/michael/projects/dotfiles/nvim/.config/nvim";
 

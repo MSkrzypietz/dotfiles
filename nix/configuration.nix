@@ -173,7 +173,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    unzip neovim git pkgs.kitty tuigreet gnumake sqlite openssl
+    unzip neovim git pkgs.kitty tuigreet gnumake sqlite openssl python3
     pyprland hyprpicker hyprcursor hyprlock hypridle hyprpaper hyprsunset hyprpolkitagent
     grim slurp wl-clipboard
     klavaro gtypist via zoxide
