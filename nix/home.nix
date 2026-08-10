@@ -82,12 +82,7 @@
       ];
       "hyprland/window" = { format = "{}"; };
       "hyprland/workspaces" = {
-        on-click = "activate";
         format = "{name}";
-        format-active = "<span class='active'>{name}</span>";
-        format-urgent = "{name}";
-        format-empty = "{name}";
-        format-occupied = "{name}";
       };
       battery = { format = "󰁹 {}%"; };
       cpu = {
