@@ -1,8 +1,8 @@
 {
   "lastChangelogVersion": "0.84.1",
-  "defaultProvider": "opencode",
-  "defaultModel": "deepseek-v4-flash-free",
-  "defaultThinkingLevel": "high",
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-5.6-luna",
+  "defaultThinkingLevel": "medium",
   "hideThinkingBlock": true,
   "theme": "catppuccin-macchiato",
   "extensions": [],
@@ -12,10 +12,10 @@
       "source": "npm:@plannotator/pi-extension",
       "skills": []
     },
-    "git:github.com/dmmulroy/pi-mcp",
-    "git:github.com/dmmulroy/pi-web-tools",
     "npm:@aliou/pi-guardrails",
-    "npm:pi-vim"
+    "npm:pi-vim",
+    "npm:pi-web-access",
+    "npm:pi-mcp-adapter"
   ],
   "steeringMode": "all",
   "followUpMode": "all",
