@@ -6,6 +6,8 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     pi.url = "github:lukasl-dev/pi.nix";
+    llm-agents.url = "github:numtide/llm-agents.nix";
+    llm-agents.inputs.nixpkgs.follows = "nixpkgs";
     stylix = {
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -17,9 +19,8 @@
     let
       system = "x86_64-linux";
 
-      # Local packages, shared between the flake output and the NixOS config.
       plannotatorOverlay = final: prev: {
-        plannotator = final.callPackage ./pkgs/plannotator { };
+        plannotator = inputs.llm-agents.packages.${system}.plannotator;
       };
 
       # Patch Waybar 0.15.0 to use the Lua dispatch protocol that Hyprland >= 0.54 requires.
