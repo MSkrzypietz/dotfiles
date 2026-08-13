@@ -36,6 +36,7 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 # pi agent runtime/state (keep settings + customization resources tracked)
 agent/*
 todos/*
+web-search-cache
 .pi/todos/*
 .pi/todos/*
 
