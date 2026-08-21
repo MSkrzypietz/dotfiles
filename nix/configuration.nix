@@ -20,6 +20,8 @@
     "amdgpu.ppfeaturemask=0xffffffff"
   ];
 
+  boot.kernelModules = [ "amdgpu" ];
+
   networking.hostName = "nixos";
 
   services.libinput = {
@@ -32,7 +34,10 @@
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
+    extraPackages = [ pkgs.rocmPackages.clr.icd ];
   };
+
+  hardware.amdgpu.opencl.enable = true;
 
   # Load amd driver for Xorg and Wayland
   services.xserver.videoDrivers = ["amdgpu"];

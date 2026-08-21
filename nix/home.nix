@@ -14,6 +14,11 @@
   #home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/michael/projects/dotfiles/nvim/.config/nvim";
   #xdg.configFile.".config/nvim".source =  "/home/michael/projects/dotfiles/nvim/.config/nvim";
 
+  services.ollama = {
+    enable = true;
+    acceleration = "rocm";
+  };
+
   programs.zoxide = {
     enable = true;
     enableZshIntegration = true;
