@@ -1,0 +1,22 @@
+* {
+  font-family: JetBrainsMono Nerd Font Mono;
+}
+
+window#waybar {
+    background: #1a1b26;
+    color: #c0caf5;
+}
+
+#workspaces button {
+  color: #a0aec0;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 5px 10px;
+  margin: 0 2px;
+}
+
+#workspaces button.active {
+  color: white;
+  background-color: #4299e1;
+  border-radius: 5px;
+}

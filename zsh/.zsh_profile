@@ -2,17 +2,26 @@ if [[ "$(uname)" == "Darwin" ]]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
+bindkey -d # reset to default
+bindkey -v # vi key bindings
+
+bindkey "^E" autosuggest-execute
+bindkey "^A" autosuggest-accept
+bindkey "^V" autosuggest-clear
+
+set -o ignoreeof
+
 alias vim=nvim
 
 export VISUAL="nvim"
 export EDITOR="$VISUAL"
 export ORACLE_HOME="$HOMEBREW_PREFIX"
 
-export PATH="$PATH:$(go env GOPATH)/bin"
+#export PATH="$PATH:$(go env GOPATH)/bin"
 export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
 
-eval "$(fnm env --use-on-cd --shell zsh)"
-eval $(thefuck --alias)
+#eval "$(fnm env --use-on-cd --shell zsh)"
+#eval $(thefuck --alias)
 eval "$(zoxide init zsh)"
 source <(fzf --zsh)
 source $HOME/.aliases
