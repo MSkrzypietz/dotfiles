@@ -1,0 +1,38 @@
+{
+  "lastChangelogVersion": "1.5.2",
+  "defaultProvider": "opencode-cli",
+  "defaultModel": "opencode/deepseek-v4.1-flash-free",
+  "defaultThinkingLevel": "medium",
+  "hideThinkingBlock": true,
+  "theme": "catppuccin-macchiato",
+  "extensions": [
+    "-builtin:mcp"
+  ],
+  "packages": [
+    "npm:pi-extmgr",
+    {
+      "source": "npm:@plannotator/pi-extension",
+      "skills": []
+    },
+    "npm:@aliou/pi-guardrails",
+    "npm:pi-vim",
+    "npm:pi-web-access",
+    "npm:pi-mcp-adapter",
+    "npm:opencode-pi"
+  ],
+  "steeringMode": "all",
+  "followUpMode": "all",
+  "treeFilterMode": "no-tools",
+  "showCacheMissNotices": true,
+  "defaultProjectTrust": "always",
+  "tuiMode": "regular",
+  "fullscreenScrollbar": "always",
+  "quietStartup": false,
+  "enableInstallTelemetry": false,
+  "extensionChangelogVersions": {
+    "{\"source\":\"npm:pi-extmgr\",\"scope\":\"user\"}": "0.4.2",
+    "{\"source\":\"npm:@aliou/pi-guardrails\",\"scope\":\"user\"}": "0.23.0",
+    "{\"source\":\"npm:pi-web-access\",\"scope\":\"user\"}": "0.47.0",
+    "{\"source\":\"npm:pi-mcp-adapter\",\"scope\":\"user\"}": "7.0.1"
+  }
+}

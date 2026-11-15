@@ -19,8 +19,14 @@ export ORACLE_HOME="$HOMEBREW_PREFIX"
 
 #export PATH="$PATH:$(go env GOPATH)/bin"
 export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
+export PATH="/home/michael/.pi/agent/bin:$PATH"
+export PATH="/home/michael/.opencode/bin:$PATH"
 
-#eval "$(fnm env --use-on-cd --shell zsh)"
+FNM_PATH="/home/michael/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "$(fnm env --use-on-cd --shell zsh)"
+fi
 #eval $(thefuck --alias)
 eval "$(zoxide init zsh)"
 source <(fzf --zsh)
